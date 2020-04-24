@@ -67,7 +67,7 @@ export class TestComponent implements OnInit {
     return "Hello "+this.name;
   }
 
-  // we use events to send data from child to parent
+  // we use events to send data from child to
   fireEvent(){
     this.childEvent.emit('Hey FireClick');
   }

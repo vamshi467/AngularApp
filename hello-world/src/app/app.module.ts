@@ -7,13 +7,15 @@ import { TestComponent } from './test/test.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { from } from 'rxjs';
 import { StructuraldirectivesComponent } from './structuraldirectives/structuraldirectives.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [ // it contains all the modules used by the application
     AppComponent,
     TestComponent,
     TwoWayBindingComponent,
-    StructuraldirectivesComponent
+    StructuraldirectivesComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
