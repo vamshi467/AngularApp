@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { from } from 'rxjs';
+import { StructuraldirectivesComponent } from './structuraldirectives/structuraldirectives.component';
 
 @NgModule({
   declarations: [ // it contains all the modules used by the application
     AppComponent,
     TestComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    StructuraldirectivesComponent
   ],
   imports: [
     BrowserModule,
