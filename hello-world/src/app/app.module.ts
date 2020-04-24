@@ -8,6 +8,10 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { from } from 'rxjs';
 import { StructuraldirectivesComponent } from './structuraldirectives/structuraldirectives.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { LearnAngularServicesComponent } from './learn-angular-services/learn-angular-services.component';
+import { EmployeelistComponent } from './employeelist/employeelist.component';
+//import { EmpDetailsComponent } from './emp-details/emp-details.component';
+import { EmployeeServiceService} from './employee-service.service'
 
 @NgModule({
   declarations: [ // it contains all the modules used by the application
@@ -15,14 +19,17 @@ import { PipesComponent } from './pipes/pipes.component';
     TestComponent,
     TwoWayBindingComponent,
     StructuraldirectivesComponent,
-    PipesComponent
+    PipesComponent,
+    LearnAngularServicesComponent,
+    EmployeelistComponent,
+   // EmpDetailsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EmployeeServiceService], // to register services in an application
   bootstrap: [AppComponent]
 })
 export class AppModule { }
