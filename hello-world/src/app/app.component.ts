@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Vamshi';
+  nameFromParent = 'From app component';
+  message = "";
 }
 

@@ -1,8 +1,9 @@
 <div style="text-align: center;">
-<h1>
+  <h1>{{message}}</h1>
+<!-- <h1>
   Welcome to {{title}}!
 </h1>
-<app-structuraldirectives></app-structuraldirectives>
-<app-test></app-test>
-<app-two-way-binding></app-two-way-binding>
-</div>
+<app-structuraldirectives></app-structuraldirectives> -->
+<app-test (childEvent) = "message=$event" [parentData] = "nameFromParent"></app-test>
+<!-- <app-two-way-binding></app-two-way-binding>
+</div> -->

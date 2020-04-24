@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output , EventEmitter} from '@angular/core';
+
 
 @Component({
   selector: 'app-test',
   template: `
   <h2> 
-  Welcome {{name}} // this is called interpolation
+  Welcome {{nameFromParent}} // this is called interpolation
   </h2>
+  <button (click) = "fireEvent()"> Send event</button>
   <input #myInput type = "text">
   <button (click) = "logMessage(myInput.value)" > Log </button>
   <h2>{{greetUser()}}</h2>
@@ -34,6 +36,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
+  @Input('parentData') public nameFromParent 
+  @Output() public childEvent = new EventEmitter();
   public name = "Vamshi"
   public siteUrl = window.location.href
   public myId = "testID"
@@ -61,6 +65,11 @@ export class TestComponent implements OnInit {
 
   greetUser(){
     return "Hello "+this.name;
+  }
+
+  // we use events to send data from child to parent
+  fireEvent(){
+    this.childEvent.emit('Hey FireClick');
   }
 
   logMessage(value){
