@@ -20,7 +20,8 @@ export class EmployeelistComponent implements OnInit {
 
   // this hook is called once the component has been initialized
   ngOnInit(): void {
-     this.employees = this._employeeService.getEmployee();
+     this._employeeService.getEmployee()
+     .subscribe(data => this.employees = data);
   }
 
 }

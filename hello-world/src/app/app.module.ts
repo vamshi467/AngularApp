@@ -12,6 +12,7 @@ import { LearnAngularServicesComponent } from './learn-angular-services/learn-an
 import { EmployeelistComponent } from './employeelist/employeelist.component';
 //import { EmpDetailsComponent } from './emp-details/emp-details.component';
 import { EmployeeServiceService} from './employee-service.service'
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [ // it contains all the modules used by the application
@@ -27,7 +28,8 @@ import { EmployeeServiceService} from './employee-service.service'
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [EmployeeServiceService], // to register services in an application
   bootstrap: [AppComponent]
