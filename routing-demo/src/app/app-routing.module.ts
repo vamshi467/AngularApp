@@ -4,6 +4,8 @@ import { DeparmentListComponent } from './deparment-list/deparment-list.componen
 import { EmployeeeListComponent } from './employeee-list/employeee-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartmentDetailComponent } from './department-detail/department-detail.component';
+import { DeparmentOverviewComponent } from './deparment-overview/deparment-overview.component';
+import { DepartmentContactComponent } from './department-contact/department-contact.component';
 
 
 const routes: Routes = [
@@ -15,7 +17,12 @@ const routes: Routes = [
     path : 'departments' , component : DeparmentListComponent
   },
   {
-    path : 'departments/:id' , component : DepartmentDetailComponent
+    path : 'departments/:id' 
+    , component : DepartmentDetailComponent
+    , children : [
+      {path : 'overview', component : DeparmentOverviewComponent},
+      {path : 'contact', component : DepartmentContactComponent}
+    ]
   },
   {
     path : 'employees' , component : EmployeeeListComponent
